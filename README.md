@@ -24,6 +24,7 @@ Project is created with:
 ```
 $ npm i
 $ npm start
+$ npm run build 
 ```
 - need a database - phpMyAdmin
 
