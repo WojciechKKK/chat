@@ -1,12 +1,7 @@
 <?php
 
 
-    $host = "sql.serwer1973180.home.pl";
-    $db_name = "31185702_chat";
-    $db_user = "31185702_chat";
-    $db_password = "G9aRVdA3";
-    $db_table = "info";
-    $db_table_user = "users";
+    $host = "s
 
     try{
 
