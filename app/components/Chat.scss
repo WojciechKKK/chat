@@ -1,0 +1,69 @@
+.chat{
+    height: 100vh;
+    width: 100%;
+    background-image: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif; 
+        &:after{
+            content : "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../image/chat-small.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            opacity : 0.1;
+            z-index: -1; 
+        }
+        
+    }
+
+@media (min-width: 700px){
+    .chat{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+            &:after{
+                content : "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url("../image/chat-big.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                opacity : 0.1;
+                z-index: -1; 
+            }
+    }
+}
+.chat-white{
+    height: 100vh;
+    width: 100%;
+    background-image: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+        &:after{
+            content : "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("../image/chat2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            opacity : 1;
+            z-index: -1; 
+        }
+}

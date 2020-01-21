@@ -1,0 +1,37 @@
+.actuallyUsers{
+    width: 100%;
+    background: black;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 10vh;
+    overflow-x: hidden;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    // overflow: scroll;
+    .actuallyUsers-title{
+        padding-bottom: 5px;
+        color: white
+    }
+    .actuallyUsers-title_white{
+        color: black
+    }
+    .actuallyUsers-list{
+        width: 85%;
+        font-size: 1.3rem;
+        font-weight: 700;
+        .actuallyUsers-el{
+            &:after{
+                content:  ' | ' ;
+                color: black;
+                display: inline;
+                clear: both;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+.actuallyUsers__white{
+    background: inherit;
+}

@@ -1,0 +1,58 @@
+$btnColor: white;
+$btnBcgk: black;
+$inputColor: black;
+$inputBackground: white;
+$inputFocus: green;
+
+.sendMessage{
+    position: fixed;
+    bottom: 0px;
+    left:0;
+    width: 100%;
+    height: 10vh;
+    background: white;
+    display: grid;
+    align-items: center;
+    background: inherit;
+    .sendMessage-form{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        .message{
+        }
+        .sendMessage-input{
+            display: inline-block;
+            padding: 10px;
+            width: 75%;
+            font-size: 1.2rem;
+            color: $inputColor;
+            border: 1px solid $inputColor;
+            background-color: $inputBackground;
+            border-radius: 10px;
+            &:focus{
+                // border: 1px solid $inputFocus;
+                box-shadow: 0px 0px 10px $inputFocus;
+            }
+            &:hover{
+                border: 2px solid $inputFocus;
+            }
+        }
+        .sendMessage-btn{
+            background-color: $btnBcgk;
+            color: $btnColor;
+            display: inline-block;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 1px solid $btnBcgk;
+            border-radius: 10px;
+            width: calc(100% - 75% - 10px);
+            box-shadow: 0px 0px 10px #333333;
+            &:hover{
+                color: $btnBcgk;
+                background-color: $btnColor;
+                cursor: pointer;
+            }
+        }
+    }
+}

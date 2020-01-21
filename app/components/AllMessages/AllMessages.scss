@@ -1,0 +1,101 @@
+.allMessages{
+    width: 100%;
+    .allMessages-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        // &:hover{
+        //     color: red;
+        // }
+      }
+      .allMessages-close__white{
+          color: black
+      }
+      .allMessages-settings {
+        position: absolute;
+        top: 15px;
+        right: 45px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        // &:hover{
+        //     color: red
+        // }
+      }
+      .allMessages-settings__white{
+          color: black
+      }
+      
+    .allMessages-container{
+        width: 90%;
+        margin: 0vh auto;
+        border-radius: 10px;
+        background-color: inherit;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-top: 2vh;
+        height: calc(100vh - 22vh);
+        // @media(min-width: 800px){
+        
+        // }
+        .allMessages-element{
+            list-style-type: none;
+            &:after, &:before {
+                content: "";
+                display: table;
+                clear: both
+            }
+            .allMessages-info{
+                display: inline-block;
+                background-color: black;
+                color: white;
+                line-height: 1.2rem;
+                border-radius: 10px;
+                padding: 5px 10px;
+                margin: 5px 0;
+
+                .allMessages-name{
+                    font-size: 0.8rem;
+                    &::first-letter{
+                        text-transform: capitalize;
+                    }
+                }
+                .allMessages-date{
+                    display:inline-block;
+                    float: right;
+                    padding-left: 10px;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        .myMessage{
+            float: right;
+            &:after, &:before {
+                content: "";
+                display: table;
+                clear: both
+            }
+        }
+        .joined{
+            display: block;
+            text-align: center;
+            width: 100%
+        }
+    }
+    .allMessages-container__white{
+        .allMessages-element{
+            .allMessages-info{
+                background: white;
+                color: black;
+                   line-height: 1.2rem;
+                border-radius: 10px;
+                padding: 5px 10px;
+                margin: 5px 0;
+            }
+        }
+    }
+    
+}

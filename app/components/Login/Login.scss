@@ -1,0 +1,147 @@
+$nameColor: black;
+$placeholderColor: black;
+$btnColor: white;
+$activeBorder: rgb(129, 127, 127);
+$bcgkColor: rgb(228, 226, 226);
+
+.chat-login{
+    position: absolute;
+    top: 50%;
+    lefT: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .chat-login-labelName{
+        display: block;
+        position: relative;
+        .name-text{
+            position: absolute;
+            font-size: 0.8rem;
+            top: -10px;
+            left: 0;
+            color: $placeholderColor;
+            font-weight: 500;
+            transform-origin: 0 0;
+            transition: all .5s ease
+        }
+        .fa-backspace{
+            font-size: 1rem;
+            position: absolute;
+            top: 50%;
+            right: -3%;
+            transform: translate(-50%, -50%);
+            color: rgba(102, 100, 100, 0);
+            // transform-origin: 0 0;
+            transition: all .5s ease;
+        }
+        .chat-white{
+            color: black
+        }
+        #name{
+            color: $nameColor;
+            font-size: 1.3rem;
+            background: none;
+            transition: all .15s ease;
+            padding: 20px 10px 10px 10px;
+            transform-origin: 0 0;
+            transition: all .5s ease;
+            border: 2px solid rgb(228, 226, 226);
+            border: none;
+            border-bottom: 2px solid $placeholderColor;
+            &:focus{
+                background: none;
+                outline: none;
+                border-bottom: 2px solid $activeBorder;
+                & + span {
+                    color: rgba(102, 100, 100, 0);
+                    transform: translateX(-50px);
+                    & + .fa-backspace{
+                        color: $placeholderColor;
+                        cursor: pointer;
+                   } 
+                }
+            }
+        }
+       
+    }
+    .chat-login-labelColor{
+        margin: 50px 0;
+        display: block;
+        position: relative;
+        .color-text{
+            position: absolute;
+            font-size: 0.8rem;
+            top: 0px;
+            left: 0;
+            color: black;
+            font-weight: 500;
+            transform-origin: 0 0;
+        }
+        #color{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+.chat-login-btn{
+    margin-top: 20px;
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: black;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        font-size: 1.2rem;
+     
+    &:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    &:active {
+        color: #e4e2e2
+    }
+    
+    &:active:after {
+        background: transparent;
+    }
+    
+    &:hover:before {
+        opacity: 1;
+    }
+    &:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+}
+
+}
