@@ -10,14 +10,14 @@ class ActuallyUsers extends Component{
         }
     }
 
-    // componentDidMount = () => {
-    //     this.saveLogin();
+    componentDidMount = () => {
+        this.saveLogin();
 
-    //     const intervalId = setInterval(() => {
-    //         this.getItemUsers();
-    //     }, 1000);
-    //     this.setState({ intervalId: intervalId })
-    // }
+        const intervalId = setInterval(() => {
+            this.getItemUsers();
+        }, 1000);
+        this.setState({ intervalId: intervalId })
+    }
 
     componentWillUnmount = () => {
         clearInterval(this.state.intervalId);
@@ -95,9 +95,9 @@ class ActuallyUsers extends Component{
             <div className="actuallyUsers">
                 <h3 className="actuallyUsers-title">Zalogowani użytkownicy:</h3>
                 <ul className="actuallyUsers-list">
-                    <li className="actuallyUsers-el" style={{color: 'red'}}>Adam</li>
+                    {/* <li className="actuallyUsers-el" style={{color: 'red'}}>Adam</li>
                     <li className="actuallyUsers-el"style={{color: 'blue'}}>Roman</li>
-                    <li className="actuallyUsers-el"style={{color: 'green'}}>Paweł</li>
+                    <li className="actuallyUsers-el"style={{color: 'green'}}>Paweł</li> */}
                 </ul>
             </div>
         )

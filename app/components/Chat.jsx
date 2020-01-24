@@ -11,7 +11,7 @@ class Chat extends Component{
         this.state = {
             valInputName: '',
             valInputColor: '#000000',
-            showChat: true,
+            showChat: false,
         }
     }
   

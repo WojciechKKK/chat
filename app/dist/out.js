@@ -30527,7 +30527,7 @@ var Chat = function (_Component) {
         _this.state = {
             valInputName: '',
             valInputColor: '#000000',
-            showChat: true
+            showChat: false
         };
         return _this;
     }
@@ -30895,6 +30895,17 @@ var AllMessages = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (AllMessages.__proto__ || Object.getPrototypeOf(AllMessages)).call(this));
 
+        _this.componentDidMount = function () {
+            //set a date and time log in user
+            _this.getActuallyDateTime();
+
+            //start download chat
+            var intervalId = setInterval(function () {
+                _this.getItemChat();
+            }, 1000);
+            _this.setState({ intervalId: intervalId });
+        };
+
         _this.componentWillUnmount = function () {
             clearInterval(_this.state.intervalId);
         };
@@ -30990,18 +31001,6 @@ var AllMessages = function (_Component) {
 
             var allMesssages = document.querySelector('.allMessages');
             allMesssages.classList.toggle('allMessages__white');
-
-            // const allMessagesInfo = document.querySelector('.allMessages-container');
-            // allMessagesInfo.classList.toggle('allMessages-container__white');
-
-            //    const close = document.querySelector('.allMessages-close')
-            //    close.classList.toggle('allMessages-close__white')
-
-            //    const darMode = document.querySelector('.allMessages-darMode');
-            //    darMode.classList.toggle('allMessages-darMode__white')
-
-            //    const more = document.querySelector('.allMessages-more');
-            //    more.classList.toggle('allMessages-more')
         };
 
         _this.state = {
@@ -31014,21 +31013,24 @@ var AllMessages = function (_Component) {
         return _this;
     }
 
-    // componentDidMount = () => {
-    //     //set a date and time log in user
-    //     this.getActuallyDateTime();
-
-    //     //start download chat
-    //     const intervalId = setInterval(() => {
-    //         this.getItemChat();
-    //      },1000);
-    //      this.setState({ intervalId: intervalId })
-    // }
-
     _createClass(AllMessages, [{
         key: 'render',
         value: function render() {
-            var test = ['ulla ut tortor malesuada, vestibulum ante non', 'vel tincidunt ante', 'Nam id maximus odio, ut semper nisi.', 'pulvinar fringilla lectu', 'pulvinar fringilla lectu', 'yes', 'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi', 'pulvinar fringilla lectu  ut semper nis', 'pulvinar fringilla lectu, vel tincidunt', 'pulvinar fringilla ', 'vel tincidunt', 'vel tincidunt vel tincidunt', 'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi'];
+            // const test = [
+            //     'ulla ut tortor malesuada, vestibulum ante non',
+            //     'vel tincidunt ante',
+            //     'Nam id maximus odio, ut semper nisi.',
+            //     'pulvinar fringilla lectu',
+            //     'pulvinar fringilla lectu',
+            //     'yes',
+            //     'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi',
+            //     'pulvinar fringilla lectu  ut semper nis',
+            //     'pulvinar fringilla lectu, vel tincidunt',
+            //     'pulvinar fringilla ',
+            //     'vel tincidunt',
+            //     'vel tincidunt vel tincidunt',
+            //     'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi',
+            // ];
             return _react2.default.createElement(
                 'div',
                 { className: 'allMessages' },
@@ -31047,32 +31049,7 @@ var AllMessages = function (_Component) {
                     { className: 'allMessages-more', onClick: this.showMore, title: 'More' },
                     _react2.default.createElement('i', { className: 'fas fa-info-circle' })
                 ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'allMessages-container' },
-                    test.map(function (el, i) {
-                        return _react2.default.createElement(
-                            'li',
-                            { key: i, className: 'allMessages-element' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'allMessages-info' },
-                                _react2.default.createElement(
-                                    'b',
-                                    { className: 'allMessages-name' },
-                                    'Imie'
-                                ),
-                                _react2.default.createElement(
-                                    'i',
-                                    { className: 'allMessages-date' },
-                                    '22:23'
-                                ),
-                                _react2.default.createElement('br', null),
-                                el
-                            )
-                        );
-                    })
-                )
+                _react2.default.createElement('div', { className: 'allMessages-container' })
             );
         }
     }]);
@@ -31359,6 +31336,15 @@ var ActuallyUsers = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (ActuallyUsers.__proto__ || Object.getPrototypeOf(ActuallyUsers)).call(this));
 
+        _this.componentDidMount = function () {
+            _this.saveLogin();
+
+            var intervalId = setInterval(function () {
+                _this.getItemUsers();
+            }, 1000);
+            _this.setState({ intervalId: intervalId });
+        };
+
         _this.componentWillUnmount = function () {
             clearInterval(_this.state.intervalId);
             _this.deleteLogin();
@@ -31441,15 +31427,6 @@ var ActuallyUsers = function (_Component) {
         return _this;
     }
 
-    // componentDidMount = () => {
-    //     this.saveLogin();
-
-    //     const intervalId = setInterval(() => {
-    //         this.getItemUsers();
-    //     }, 1000);
-    //     this.setState({ intervalId: intervalId })
-    // }
-
     _createClass(ActuallyUsers, [{
         key: 'render',
         value: function render() {
@@ -31461,25 +31438,7 @@ var ActuallyUsers = function (_Component) {
                     { className: 'actuallyUsers-title' },
                     'Zalogowani u\u017Cytkownicy:'
                 ),
-                _react2.default.createElement(
-                    'ul',
-                    { className: 'actuallyUsers-list' },
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'actuallyUsers-el', style: { color: 'red' } },
-                        'Adam'
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'actuallyUsers-el', style: { color: 'blue' } },
-                        'Roman'
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'actuallyUsers-el', style: { color: 'green' } },
-                        'Pawe\u0142'
-                    )
-                )
+                _react2.default.createElement('ul', { className: 'actuallyUsers-list' })
             );
         }
     }]);
