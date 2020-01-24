@@ -30527,7 +30527,7 @@ var Chat = function (_Component) {
         _this.state = {
             valInputName: '',
             valInputColor: '#000000',
-            showChat: false
+            showChat: true
         };
         return _this;
     }
@@ -30622,7 +30622,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, ".chat {\n  height: 100vh;\n  width: 100%;\n  background-image: none;\n  position: relative;\n  font-family: 'Roboto', sans-serif;\n}\n\n.chat:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-image: url(" + escape(__webpack_require__(367)) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 100%;\n  height: 100%;\n  opacity: 0.1;\n  z-index: -1;\n}\n\n@media (min-width: 700px) {\n  .chat {\n    height: 100vh;\n    width: 100%;\n    position: relative;\n    font-family: 'Roboto', sans-serif;\n  }\n\n  .chat:after {\n    content: \"\";\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-image: url(" + escape(__webpack_require__(368)) + ");\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n    width: 100%;\n    height: 100%;\n    opacity: 0.1;\n    z-index: -1;\n  }\n}\n\n.chat-white {\n  height: 100vh;\n  width: 100%;\n  background-image: none;\n  position: relative;\n  font-family: 'Roboto', sans-serif;\n}\n\n.chat-white:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-image: url(" + escape(__webpack_require__(369)) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 100%;\n  height: 100%;\n  opacity: 1;\n  z-index: -1;\n}", ""]);
+exports.push([module.i, ".chat {\n  height: 100vh;\n  width: 100%;\n  background-image: none;\n  position: relative;\n  font-family: 'Roboto', sans-serif;\n}\n\n.chat:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-image: url(" + escape(__webpack_require__(367)) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 100%;\n  height: 100%;\n  opacity: 0.1;\n  z-index: -1;\n}\n\n@media (min-width: 700px) {\n  .chat:after {\n    background-image: url(" + escape(__webpack_require__(368)) + ");\n  }\n}\n\n.chat-white:after {\n  background-image: url(" + escape(__webpack_require__(369)) + ");\n  opacity: 1;\n}", ""]);
 
 // exports
 
@@ -30855,7 +30855,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, ".chat-login {\n  position: absolute;\n  top: 50%;\n  lefT: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}\n\n.chat-login .chat-login-labelName {\n  display: block;\n  position: relative;\n}\n\n.chat-login .chat-login-labelName .name-text {\n  position: absolute;\n  font-size: 0.8rem;\n  top: -10px;\n  left: 0;\n  color: black;\n  font-weight: 500;\n  transform-origin: 0 0;\n  transition: all .5s ease;\n}\n\n.chat-login .chat-login-labelName .fa-backspace {\n  font-size: 1rem;\n  position: absolute;\n  top: 50%;\n  right: -3%;\n  transform: translate(-50%, -50%);\n  color: rgba(102, 100, 100, 0);\n  transition: all .5s ease;\n}\n\n.chat-login .chat-login-labelName .chat-white {\n  color: black;\n}\n\n.chat-login .chat-login-labelName #name {\n  color: #4c86e4;\n  font-size: 1.3rem;\n  background: none;\n  transition: all .15s ease;\n  padding: 20px 10px 10px 10px;\n  transform-origin: 0 0;\n  transition: all .5s ease;\n  border: 2px solid #e4e2e2;\n  border: none;\n  border-bottom: 2px solid black;\n}\n\n.chat-login .chat-login-labelName #name:focus {\n  background: none;\n  outline: none;\n  border-bottom: 2px solid #817f7f;\n}\n\n.chat-login .chat-login-labelName #name:focus + span {\n  color: rgba(102, 100, 100, 0);\n  transform: translateX(-50px);\n}\n\n.chat-login .chat-login-labelName #name:focus + span + .fa-backspace {\n  color: black;\n  cursor: pointer;\n}\n\n.chat-login .chat-login-labelColor {\n  margin: 50px 0;\n  display: block;\n  position: relative;\n}\n\n.chat-login .chat-login-labelColor .color-text {\n  position: absolute;\n  font-size: 0.8rem;\n  top: 0px;\n  left: 0;\n  color: black;\n  font-weight: 500;\n  transform-origin: 0 0;\n}\n\n.chat-login .chat-login-labelColor #color {\n  width: 50px;\n  height: 50px;\n}\n\n.chat-login .chat-login-btn {\n  margin-top: 20px;\n  width: 220px;\n  height: 50px;\n  border: none;\n  outline: none;\n  color: #fff;\n  background: black;\n  cursor: pointer;\n  position: relative;\n  z-index: 0;\n  border-radius: 10px;\n  font-size: 1.2rem;\n}\n\n.chat-login .chat-login-btn:before {\n  content: '';\n  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n  position: absolute;\n  top: -2px;\n  left: -2px;\n  background-size: 400%;\n  z-index: -1;\n  filter: blur(5px);\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  animation: glowing 20s linear infinite;\n  opacity: 0;\n  transition: opacity .3s ease-in-out;\n  border-radius: 10px;\n}\n\n.chat-login .chat-login-btn:active {\n  color: #e4e2e2;\n}\n\n.chat-login .chat-login-btn:active:after {\n  background: transparent;\n}\n\n.chat-login .chat-login-btn:hover:before {\n  opacity: 1;\n}\n\n.chat-login .chat-login-btn:after {\n  z-index: -1;\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  left: 0;\n  top: 0;\n  border-radius: 10px;\n}\n\n@keyframes glowing {\n  0% {\n    background-position: 0 0;\n  }\n\n  50% {\n    background-position: 400% 0;\n  }\n\n  100% {\n    background-position: 0 0;\n  }\n}", ""]);
+exports.push([module.i, ".chat-login {\n  position: absolute;\n  top: 50%;\n  lefT: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}\n\n.chat-login .chat-login-labelName {\n  display: block;\n  position: relative;\n}\n\n.chat-login .chat-login-labelName .name-text {\n  position: absolute;\n  font-size: 0.8rem;\n  top: -10px;\n  left: 0;\n  color: black;\n  font-weight: 500;\n  transform-origin: 0 0;\n  transition: all .5s ease;\n}\n\n.chat-login .chat-login-labelName .fa-backspace {\n  font-size: 1rem;\n  position: absolute;\n  top: 50%;\n  right: -3%;\n  transform: translate(-50%, -50%);\n  color: rgba(102, 100, 100, 0);\n  transition: all .5s ease;\n}\n\n.chat-login .chat-login-labelName .chat-white {\n  color: black;\n}\n\n.chat-login .chat-login-labelName #name {\n  color: black;\n  font-size: 1.3rem;\n  background: none;\n  transition: all .15s ease;\n  padding: 20px 10px 10px 10px;\n  transform-origin: 0 0;\n  transition: all .5s ease;\n  border: 2px solid #e4e2e2;\n  border: none;\n  border-bottom: 2px solid black;\n}\n\n.chat-login .chat-login-labelName #name:focus {\n  background: none;\n  outline: none;\n  border-bottom: 2px solid #817f7f;\n}\n\n.chat-login .chat-login-labelName #name:focus + span {\n  color: rgba(102, 100, 100, 0);\n  transform: translateX(-50px);\n}\n\n.chat-login .chat-login-labelName #name:focus + span + .fa-backspace {\n  color: black;\n  cursor: pointer;\n}\n\n.chat-login .chat-login-labelColor {\n  margin: 50px 0;\n  display: block;\n  position: relative;\n}\n\n.chat-login .chat-login-labelColor .color-text {\n  position: absolute;\n  font-size: 0.8rem;\n  top: 0px;\n  left: 0;\n  color: black;\n  font-weight: 500;\n  transform-origin: 0 0;\n}\n\n.chat-login .chat-login-labelColor #color {\n  width: 50px;\n  height: 50px;\n}\n\n.chat-login .chat-login-btn {\n  margin-top: 20px;\n  width: 220px;\n  height: 50px;\n  border: none;\n  outline: none;\n  color: #fff;\n  background: black;\n  cursor: pointer;\n  position: relative;\n  z-index: 0;\n  border-radius: 10px;\n  font-size: 1.2rem;\n}\n\n.chat-login .chat-login-btn:before {\n  content: '';\n  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n  position: absolute;\n  top: -2px;\n  left: -2px;\n  background-size: 400%;\n  z-index: -1;\n  filter: blur(5px);\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  animation: glowing 20s linear infinite;\n  opacity: 0;\n  transition: opacity .3s ease-in-out;\n  border-radius: 10px;\n}\n\n.chat-login .chat-login-btn:active {\n  color: #e4e2e2;\n}\n\n.chat-login .chat-login-btn:active:after {\n  background: transparent;\n}\n\n.chat-login .chat-login-btn:hover:before {\n  opacity: 1;\n}\n\n.chat-login .chat-login-btn:after {\n  z-index: -1;\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  left: 0;\n  top: 0;\n  border-radius: 10px;\n}\n\n@keyframes glowing {\n  0% {\n    background-position: 0 0;\n  }\n\n  50% {\n    background-position: 400% 0;\n  }\n\n  100% {\n    background-position: 0 0;\n  }\n}", ""]);
 
 // exports
 
@@ -30894,17 +30894,6 @@ var AllMessages = function (_Component) {
         _classCallCheck(this, AllMessages);
 
         var _this = _possibleConstructorReturn(this, (AllMessages.__proto__ || Object.getPrototypeOf(AllMessages)).call(this));
-
-        _this.componentDidMount = function () {
-            //set a date and time log in user
-            _this.getActuallyDateTime();
-
-            //start download chat
-            var intervalId = setInterval(function () {
-                _this.getItemChat();
-            }, 1000);
-            _this.setState({ intervalId: intervalId });
-        };
 
         _this.componentWillUnmount = function () {
             clearInterval(_this.state.intervalId);
@@ -30978,11 +30967,15 @@ var AllMessages = function (_Component) {
             }
         };
 
-        _this.showSettings = function () {
+        _this.showDarkMode = function () {
             _this.setState({
                 whiteChat: !_this.state.whiteChat
             });
             _this.darkMode();
+        };
+
+        _this.showMore = function () {
+            alert('info');
         };
 
         _this.darkMode = function () {
@@ -30995,14 +30988,20 @@ var AllMessages = function (_Component) {
             var headerLoginUser = document.querySelector('.actuallyUsers');
             headerLoginUser.classList.toggle('actuallyUsers__white');
 
-            var allMessagesInfo = document.querySelector('.allMessages-container');
-            allMessagesInfo.classList.toggle('allMessages-container__white');
+            var allMesssages = document.querySelector('.allMessages');
+            allMesssages.classList.toggle('allMessages__white');
 
-            var close = document.querySelector('.allMessages-close');
-            close.classList.toggle('allMessages-close__white');
+            // const allMessagesInfo = document.querySelector('.allMessages-container');
+            // allMessagesInfo.classList.toggle('allMessages-container__white');
 
-            var settings = document.querySelector('.allMessages-settings');
-            settings.classList.toggle('allMessages-settings__white');
+            //    const close = document.querySelector('.allMessages-close')
+            //    close.classList.toggle('allMessages-close__white')
+
+            //    const darMode = document.querySelector('.allMessages-darMode');
+            //    darMode.classList.toggle('allMessages-darMode__white')
+
+            //    const more = document.querySelector('.allMessages-more');
+            //    more.classList.toggle('allMessages-more')
         };
 
         _this.state = {
@@ -31015,38 +31014,65 @@ var AllMessages = function (_Component) {
         return _this;
     }
 
+    // componentDidMount = () => {
+    //     //set a date and time log in user
+    //     this.getActuallyDateTime();
+
+    //     //start download chat
+    //     const intervalId = setInterval(() => {
+    //         this.getItemChat();
+    //      },1000);
+    //      this.setState({ intervalId: intervalId })
+    // }
+
     _createClass(AllMessages, [{
         key: 'render',
         value: function render() {
-            // const test = [
-            //     'ulla ut tortor malesuada, vestibulum ante non',
-            //     'vel tincidunt ante',
-            //     'Nam id maximus odio, ut semper nisi.',
-            //     'pulvinar fringilla lectu',
-            //     'pulvinar fringilla lectu',
-            //     'yes',
-            //     'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi',
-            //     'pulvinar fringilla lectu  ut semper nis',
-            //     'pulvinar fringilla lectu, vel tincidunt',
-            //     'pulvinar fringilla ',
-            //     'vel tincidunt',
-            //     'vel tincidunt vel tincidunt',
-            //     'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi',
-            // ];
+            var test = ['ulla ut tortor malesuada, vestibulum ante non', 'vel tincidunt ante', 'Nam id maximus odio, ut semper nisi.', 'pulvinar fringilla lectu', 'pulvinar fringilla lectu', 'yes', 'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi', 'pulvinar fringilla lectu  ut semper nis', 'pulvinar fringilla lectu, vel tincidunt', 'pulvinar fringilla ', 'vel tincidunt', 'vel tincidunt vel tincidunt', 'ulla ut tortor malesuada, vestibulum ante non. Nam id maximus odio, ut semper nisi'];
             return _react2.default.createElement(
                 'div',
                 { className: 'allMessages' },
                 _react2.default.createElement(
                     'p',
                     { className: 'allMessages-close', onClick: this.closeChat, title: 'Zamknij chat' },
-                    '\xD7'
+                    _react2.default.createElement('i', { className: 'fas fa-times-circle' })
                 ),
                 _react2.default.createElement(
                     'p',
-                    { className: 'allMessages-settings', onClick: this.showSettings, title: 'Ustawienia' },
-                    '#'
+                    { className: 'allMessages-darkMode', onClick: this.showDarkMode, title: 'Tryb nocny' },
+                    _react2.default.createElement('i', { className: 'fas fa-palette' })
                 ),
-                _react2.default.createElement('div', { className: 'allMessages-container' })
+                _react2.default.createElement(
+                    'p',
+                    { className: 'allMessages-more', onClick: this.showMore, title: 'More' },
+                    _react2.default.createElement('i', { className: 'fas fa-info-circle' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'allMessages-container' },
+                    test.map(function (el, i) {
+                        return _react2.default.createElement(
+                            'li',
+                            { key: i, className: 'allMessages-element' },
+                            _react2.default.createElement(
+                                'p',
+                                { className: 'allMessages-info' },
+                                _react2.default.createElement(
+                                    'b',
+                                    { className: 'allMessages-name' },
+                                    'Imie'
+                                ),
+                                _react2.default.createElement(
+                                    'i',
+                                    { className: 'allMessages-date' },
+                                    '22:23'
+                                ),
+                                _react2.default.createElement('br', null),
+                                el
+                            )
+                        );
+                    })
+                )
             );
         }
     }]);
@@ -31115,7 +31141,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, ".allMessages {\n  width: 100%;\n}\n\n.allMessages .allMessages-close {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  font-size: 30px;\n  cursor: pointer;\n  color: white;\n}\n\n.allMessages .allMessages-close__white {\n  color: black;\n}\n\n.allMessages .allMessages-settings {\n  position: absolute;\n  top: 15px;\n  right: 45px;\n  font-size: 30px;\n  cursor: pointer;\n  color: white;\n}\n\n.allMessages .allMessages-settings__white {\n  color: black;\n}\n\n.allMessages .allMessages-container {\n  width: 90%;\n  margin: 0vh auto;\n  border-radius: 10px;\n  background-color: inherit;\n  overflow: scroll;\n  overflow-x: hidden;\n  margin-top: 2vh;\n  height: calc(100vh - 22vh);\n}\n\n.allMessages .allMessages-container .allMessages-element {\n  list-style-type: none;\n}\n\n.allMessages .allMessages-container .allMessages-element:after,\n.allMessages .allMessages-container .allMessages-element:before {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info {\n  display: inline-block;\n  background-color: black;\n  color: white;\n  line-height: 1.2rem;\n  border-radius: 10px;\n  padding: 5px 10px;\n  margin: 5px 0;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-name {\n  font-size: 0.8rem;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-name::first-letter {\n  text-transform: capitalize;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-date {\n  display: inline-block;\n  float: right;\n  padding-left: 10px;\n  font-size: 0.5rem;\n}\n\n.allMessages .allMessages-container .myMessage {\n  float: right;\n}\n\n.allMessages .allMessages-container .myMessage:after,\n.allMessages .allMessages-container .myMessage:before {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.allMessages .allMessages-container .joined {\n  display: block;\n  text-align: center;\n  width: 100%;\n}\n\n.allMessages .allMessages-container__white .allMessages-element .allMessages-info {\n  background: white;\n  color: black;\n  line-height: 1.2rem;\n  border-radius: 10px;\n  padding: 5px 10px;\n  margin: 5px 0;\n}", ""]);
+exports.push([module.i, ".allMessages {\n  width: 100%;\n}\n\n@media (min-width: 800px) {\n  .allMessages {\n    width: 85%;\n    display: inline-block;\n  }\n}\n\n.allMessages .allMessages-close {\n  position: absolute;\n  top: 15px;\n  font-size: 25px;\n  width: 25px;\n  text-align: center;\n  cursor: pointer;\n  color: white;\n  right: 15px;\n}\n\n@media (min-width: 800px) {\n  .allMessages .allMessages-close {\n    color: black;\n    top: 15px;\n    right: 1vw;\n  }\n}\n\n@media (min-width: 1000px) {\n  .allMessages .allMessages-close {\n    right: 1.5vw;\n  }\n}\n\n.allMessages .allMessages-darkMode {\n  position: absolute;\n  top: 15px;\n  font-size: 25px;\n  width: 25px;\n  text-align: center;\n  cursor: pointer;\n  color: white;\n  right: 45px;\n}\n\n@media (min-width: 800px) {\n  .allMessages .allMessages-darkMode {\n    color: black;\n    top: 45px;\n    right: 1vw;\n  }\n}\n\n@media (min-width: 1000px) {\n  .allMessages .allMessages-darkMode {\n    right: 1.5vw;\n  }\n}\n\n.allMessages .allMessages-more {\n  position: absolute;\n  top: 15px;\n  font-size: 25px;\n  width: 25px;\n  text-align: center;\n  cursor: pointer;\n  color: white;\n  right: 75px;\n}\n\n@media (min-width: 800px) {\n  .allMessages .allMessages-more {\n    color: black;\n    top: 75px;\n    right: 1vw;\n  }\n}\n\n@media (min-width: 1000px) {\n  .allMessages .allMessages-more {\n    right: 1.5vw;\n  }\n}\n\n.allMessages .allMessages-container {\n  width: 90%;\n  margin: 0vh auto;\n  border-radius: 10px;\n  background-color: inherit;\n  overflow: scroll;\n  overflow-x: hidden;\n  margin: 2vh auto;\n  height: calc(100vh - 22vh);\n}\n\n@media (min-width: 800px) {\n  .allMessages .allMessages-container {\n    height: calc(100vh - 12vh);\n  }\n}\n\n.allMessages .allMessages-container .allMessages-element {\n  list-style-type: none;\n}\n\n.allMessages .allMessages-container .allMessages-element:after,\n.allMessages .allMessages-container .allMessages-element:before {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info {\n  display: inline-block;\n  background-color: black;\n  color: white;\n  line-height: 1.2rem;\n  border-radius: 10px;\n  padding: 5px 10px;\n  margin: 5px 0;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-name {\n  font-size: 0.8rem;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-name::first-letter {\n  text-transform: capitalize;\n}\n\n.allMessages .allMessages-container .allMessages-element .allMessages-info .allMessages-date {\n  display: inline-block;\n  float: right;\n  padding-left: 10px;\n  font-size: 0.5rem;\n}\n\n.allMessages__white .allMessages-close,\n.allMessages__white .allMessages-darkMode,\n.allMessages__white .allMessages-more {\n  color: black;\n}\n\n@media (min-width: 800px) {\n  .allMessages__white .allMessages-close,\n  .allMessages__white .allMessages-darkMode,\n  .allMessages__white .allMessages-more {\n    color: white;\n  }\n}\n\n.allMessages__white .allMessages-container .allMessages-element .allMessages-info {\n  background: white;\n  color: black;\n}", ""]);
 
 // exports
 
@@ -31293,7 +31319,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, ".sendMessage {\n  position: absolute;\n  bottom: 0px;\n  left: 0;\n  width: 100%;\n  height: 10vh;\n  background: white;\n  display: grid;\n  align-items: center;\n  background: inherit;\n}\n\n.sendMessage .sendMessage-form {\n  width: 90%;\n  text-align: center;\n  margin: 0 auto;\n}\n\n.sendMessage .sendMessage-form .sendMessage-input {\n  display: inline-block;\n  padding: 10px;\n  width: 75%;\n  font-size: 1.2rem;\n  color: black;\n  border: 1px solid black;\n  background-color: white;\n  border-radius: 10px;\n}\n\n.sendMessage .sendMessage-form .sendMessage-input:focus {\n  box-shadow: 0px 0px 10px green;\n}\n\n.sendMessage .sendMessage-form .sendMessage-input:hover {\n  border: 2px solid green;\n}\n\n.sendMessage .sendMessage-form .sendMessage-btn {\n  background-color: black;\n  color: white;\n  display: inline-block;\n  margin-left: 10px;\n  padding: 10px;\n  font-size: 1.2rem;\n  border: 1px solid black;\n  border-radius: 10px;\n  width: calc(100% - 75% - 10px);\n  box-shadow: 0px 0px 10px #333333;\n}\n\n.sendMessage .sendMessage-form .sendMessage-btn:hover {\n  color: black;\n  background-color: white;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".sendMessage {\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  height: 10vh;\n  background: white;\n  display: grid;\n  align-items: center;\n  background: inherit;\n}\n\n@media (min-width: 800px) {\n  .sendMessage {\n    right: 0;\n    width: 85%;\n    height: 8vh;\n  }\n}\n\n.sendMessage .sendMessage-form {\n  width: 90%;\n  text-align: center;\n  margin: 0 auto;\n}\n\n@media (min-width: 800px) {\n  .sendMessage .sendMessage-form {\n    width: 90%;\n  }\n}\n\n.sendMessage .sendMessage-form .sendMessage-input {\n  display: inline-block;\n  padding: 10px;\n  width: 75%;\n  font-size: 1.2rem;\n  color: black;\n  border: 1px solid black;\n  background-color: white;\n  border-radius: 10px;\n}\n\n.sendMessage .sendMessage-form .sendMessage-input:focus {\n  box-shadow: 0px 0px 10px green;\n}\n\n.sendMessage .sendMessage-form .sendMessage-input:hover {\n  border: 2px solid green;\n}\n\n.sendMessage .sendMessage-form .sendMessage-btn {\n  background-color: black;\n  color: white;\n  display: inline-block;\n  margin-left: 10px;\n  padding: 10px;\n  font-size: 1.2rem;\n  border: 1px solid black;\n  border-radius: 10px;\n  width: calc(100% - 75% - 10px);\n  box-shadow: 0px 0px 10px #333333;\n}\n\n.sendMessage .sendMessage-form .sendMessage-btn:hover {\n  color: black;\n  background-color: white;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -31332,15 +31358,6 @@ var ActuallyUsers = function (_Component) {
         _classCallCheck(this, ActuallyUsers);
 
         var _this = _possibleConstructorReturn(this, (ActuallyUsers.__proto__ || Object.getPrototypeOf(ActuallyUsers)).call(this));
-
-        _this.componentDidMount = function () {
-            _this.saveLogin();
-
-            var intervalId = setInterval(function () {
-                _this.getItemUsers();
-            }, 1000);
-            _this.setState({ intervalId: intervalId });
-        };
 
         _this.componentWillUnmount = function () {
             clearInterval(_this.state.intervalId);
@@ -31424,6 +31441,15 @@ var ActuallyUsers = function (_Component) {
         return _this;
     }
 
+    // componentDidMount = () => {
+    //     this.saveLogin();
+
+    //     const intervalId = setInterval(() => {
+    //         this.getItemUsers();
+    //     }, 1000);
+    //     this.setState({ intervalId: intervalId })
+    // }
+
     _createClass(ActuallyUsers, [{
         key: 'render',
         value: function render() {
@@ -31435,7 +31461,25 @@ var ActuallyUsers = function (_Component) {
                     { className: 'actuallyUsers-title' },
                     'Zalogowani u\u017Cytkownicy:'
                 ),
-                _react2.default.createElement('ul', { className: 'actuallyUsers-list' })
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'actuallyUsers-list' },
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'actuallyUsers-el', style: { color: 'red' } },
+                        'Adam'
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'actuallyUsers-el', style: { color: 'blue' } },
+                        'Roman'
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'actuallyUsers-el', style: { color: 'green' } },
+                        'Pawe\u0142'
+                    )
+                )
             );
         }
     }]);
@@ -31504,7 +31548,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, ".actuallyUsers {\n  width: 100%;\n  background: black;\n  padding-left: 10px;\n  padding-top: 10px;\n  height: 10vh;\n  overflow-x: hidden;\n  font-family: 'Amatic SC', cursive;\n  font-size: 1.5rem;\n  font-weight: 700;\n  letter-spacing: 0.1rem;\n}\n\n.actuallyUsers .actuallyUsers-title {\n  padding-bottom: 5px;\n  color: white;\n}\n\n.actuallyUsers .actuallyUsers-title_white {\n  color: black;\n}\n\n.actuallyUsers .actuallyUsers-list {\n  width: 85%;\n  font-size: 1.3rem;\n  font-weight: 700;\n}\n\n.actuallyUsers .actuallyUsers-list .actuallyUsers-el:after {\n  content: ' | ';\n  color: black;\n  display: inline;\n  clear: both;\n  padding: 0 10px;\n}\n\n.actuallyUsers__white {\n  background: inherit;\n}", ""]);
+exports.push([module.i, ".actuallyUsers {\n  width: 100%;\n  background: black;\n  padding-left: 10px;\n  padding-top: 10px;\n  height: 10vh;\n  overflow-x: hidden;\n  font-family: 'Amatic SC', cursive;\n  font-size: 1.5rem;\n  font-weight: 700;\n  letter-spacing: 0.1rem;\n}\n\n@media (min-width: 800px) {\n  .actuallyUsers {\n    width: 15%;\n    display: inline-block;\n    padding-top: 2vh;\n    float: left;\n    height: 100vh;\n  }\n}\n\n.actuallyUsers .actuallyUsers-title {\n  color: white;\n  padding-bottom: 5px;\n}\n\n.actuallyUsers .actuallyUsers-list {\n  width: 85%;\n  font-size: 1.3rem;\n  font-weight: 700;\n}\n\n@media (min-width: 800px) {\n  .actuallyUsers .actuallyUsers-list {\n    width: 100%;\n  }\n}\n\n.actuallyUsers .actuallyUsers-list .actuallyUsers-el {\n  display: inline-block;\n}\n\n@media (min-width: 800px) {\n  .actuallyUsers .actuallyUsers-list .actuallyUsers-el {\n    font-size: 2rem;\n    display: block;\n    margin-top: 10px;\n  }\n}\n\n.actuallyUsers .actuallyUsers-list .actuallyUsers-el:after {\n  content: ' | ';\n  color: white;\n  display: inline;\n  clear: both;\n  padding: 0 10px;\n}\n\n@media (min-width: 800px) {\n  .actuallyUsers .actuallyUsers-list .actuallyUsers-el:after {\n    color: black;\n  }\n}\n\n.actuallyUsers__white {\n  background-color: white;\n}\n\n.actuallyUsers__white .actuallyUsers-title {\n  color: black;\n}\n\n.actuallyUsers__white .actuallyUsers-list .actuallyUsers-el:after {\n  color: black;\n}\n\n@media (min-width: 800px) {\n  .actuallyUsers__white .actuallyUsers-list .actuallyUsers-el:after {\n    color: white;\n  }\n}", ""]);
 
 // exports
 

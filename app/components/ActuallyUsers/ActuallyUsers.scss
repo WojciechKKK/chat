@@ -1,6 +1,13 @@
+$color: white;
+$backgroundColor: black;
+$darkMode-color: black;
+$darkMode-backgroundColor: white;
+
+
+
 .actuallyUsers{
     width: 100%;
-    background: black;
+    background: $backgroundColor;
     padding-left: 10px;
     padding-top: 10px;
     height: 10vh;
@@ -9,29 +16,60 @@
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    // overflow: scroll;
-    .actuallyUsers-title{
-        padding-bottom: 5px;
-        color: white
+    @media(min-width: 800px){
+        width: 15%;
+        display: inline-block;
+        padding-top: 2vh;
+        float: left;
+        height: 100vh
     }
-    .actuallyUsers-title_white{
-        color: black
+    .actuallyUsers-title{
+        color: $color;
+        padding-bottom: 5px;
     }
     .actuallyUsers-list{
         width: 85%;
         font-size: 1.3rem;
         font-weight: 700;
+        @media(min-width: 800px){
+           width: 100%
+        }
         .actuallyUsers-el{
+            display: inline-block;
+            @media(min-width: 800px){
+                font-size: 2rem;
+                display: block;
+                margin-top: 10px;
+            }
             &:after{
                 content:  ' | ' ;
-                color: black;
+                color: $color;
                 display: inline;
                 clear: both;
                 padding: 0 10px;
+                @media(min-width: 800px){
+                    color: $backgroundColor;
+                }
             }
         }
     }
 }
+
+
 .actuallyUsers__white{
-    background: inherit;
+    background-color: $color;
+    .actuallyUsers-title{
+    color: $backgroundColor;
+      
+    }
+    .actuallyUsers-list{
+        .actuallyUsers-el{
+            &:after{
+                color: $darkMode-color;
+                @media(min-width: 800px){
+                    color: $darkMode-backgroundColor;
+                }
+            }
+        }
+    }
 }

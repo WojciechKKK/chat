@@ -1,33 +1,46 @@
+$color: white;
+$background: black;
+$darkMode-color: black;
+$darkMode-backgroundColor: white;
+
+@mixin allMessagesBtn($size) {
+    position: absolute;
+    top: 15px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+    color: $color;
+    @media(min-width: 800px){
+        color: black;
+        top: $size;
+        right: 1vw;
+    }
+    @media(min-width: 1000px){
+        right: 1.5vw;
+    }
+}
+
 .allMessages{
     width: 100%;
+    @media(min-width: 800px){
+        width: 85%;
+        display: inline-block;
+    }
     .allMessages-close {
-        position: absolute;
-        top: 15px;
+        @include allMessagesBtn(15px);
         right: 15px;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-        // &:hover{
-        //     color: red;
-        // }
       }
-      .allMessages-close__white{
-          color: black
-      }
-      .allMessages-settings {
-        position: absolute;
-        top: 15px;
+      .allMessages-darkMode {
+        @include allMessagesBtn(45px);
         right: 45px;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-        // &:hover{
-        //     color: red
-        // }
       }
-      .allMessages-settings__white{
-          color: black
+
+      .allMessages-more {
+        @include allMessagesBtn(75px);
+        right: 75px;
       }
+
       
     .allMessages-container{
         width: 90%;
@@ -36,11 +49,11 @@
         background-color: inherit;
         overflow: scroll;
         overflow-x: hidden;
-        margin-top: 2vh;
+        margin: 2vh auto;
         height: calc(100vh - 22vh);
-        // @media(min-width: 800px){
-        
-        // }
+        @media(min-width: 800px){
+            height: calc(100vh - 12vh);
+        }
         .allMessages-element{
             list-style-type: none;
             &:after, &:before {
@@ -50,8 +63,8 @@
             }
             .allMessages-info{
                 display: inline-block;
-                background-color: black;
-                color: white;
+                background-color: $background;
+                color: $color;
                 line-height: 1.2rem;
                 border-radius: 10px;
                 padding: 5px 10px;
@@ -71,31 +84,39 @@
                 }
             }
         }
-        .myMessage{
-            float: right;
-            &:after, &:before {
-                content: "";
-                display: table;
-                clear: both
-            }
-        }
-        .joined{
-            display: block;
-            text-align: center;
-            width: 100%
+    }
+}
+
+
+
+
+
+.allMessages__white{
+    .allMessages-close, .allMessages-darkMode , .allMessages-more{
+        color: $darkMode-color;
+        @media(min-width: 800px){
+            color: $darkMode-backgroundColor;
         }
     }
-    .allMessages-container__white{
+    .allMessages-container{
         .allMessages-element{
             .allMessages-info{
-                background: white;
-                color: black;
-                   line-height: 1.2rem;
-                border-radius: 10px;
-                padding: 5px 10px;
-                margin: 5px 0;
+                background: $darkMode-backgroundColor;
+                color: $darkMode-color;
             }
         }
     }
-    
 }
+        // .myMessage{
+        //     float: right;
+        //     &:after, &:before {
+        //         content: "";
+        //         display: table;
+        //         clear: both
+        //     }
+        // }
+        // .joined{
+        //     display: block;
+        //     text-align: center;
+        //     width: 100%
+        // }
